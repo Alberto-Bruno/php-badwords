@@ -27,12 +27,12 @@ $filtredtext_length = strlen($censured_text);
 <body>
     <div class='container text-center d-flex my-5'>
         <div class='border w-50 mx-3 p-2'>
-            <h2>Paragrafo originale:</h2>
+            <h2>Paragrafo originale</h2>
             <p><?php echo $text ?></p>
             <h4>Lunghezza testo: <span><?= $original_length?> </span> </h4>
         </div>
         <div class='border w-50 mx-3 p-2'>
-            <h2>Paragrafo censurato:</h2>
+            <h2>Paragrafo censurato</h2>
             <p><?php echo $censured_text ?></p>
             <h4>Lunghezza testo: <span><?= $filtredtext_length?> </span> </h4>
         </div>
