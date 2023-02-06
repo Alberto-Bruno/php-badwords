@@ -1,10 +1,8 @@
 <?php
-$bad_word = $_GET['badword'];
 $text = $_GET['text'];
+$paragraph = $_GET['paragraph'];
 
-
-$censured_text = str_replace($bad_word, '***' , $text);
-
+$censured_text = str_replace($paragraph, '***' , $text);
 $original_length = strlen($text);
 $filtredtext_length = strlen($censured_text);
 
@@ -26,13 +24,13 @@ $filtredtext_length = strlen($censured_text);
 <body>
     <div>
         <div>
-            <h1>Testo non censurato:</h1>
-            <p><?=$text ?></p>
+            <h1>Paragrafo originale:</h1>
+            <p><?php echo $text ?></p>
             <h4>Lunghezza testo: <span><?= $original_length?> </span> </h4>
         </div>
         <div>
-            <h1>Testo censurato:</h1>
-            <p><?=$censured_text ?></p>
+            <h1>Paragrafo censurato:</h1>
+            <p><?php echo $censured_text ?></p>
             <h4>Lunghezza testo: <span><?= $filtredtext_length?> </span> </h4>
         </div>
     </div>
